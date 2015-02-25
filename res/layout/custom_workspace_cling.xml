@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <!-- dummy layout, to be replaced in overlays -->
-<com.simple.android.launcher.Cling
+<com.hello.android.launcher.Cling
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher"
     android:layout_width="match_parent"
@@ -29,4 +29,4 @@
         android:gravity="start"
         android:layout_gravity="bottom|start"
     />
-</com.simple.android.launcher.Cling>
+</com.hello.android.launcher.Cling>

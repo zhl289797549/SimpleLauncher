@@ -19,41 +19,41 @@
 -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.simple.android.launcher">
+    package="com.hello.android.launcher">
     
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19"/>
     
     <permission
-        android:name="com.simple.android.launcher.permission.PRELOAD_WORKSPACE"
+        android:name="com.hello.android.launcher.permission.PRELOAD_WORKSPACE"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="system|signature" />
     <permission
-        android:name="com.simple.android.launcher.permission.INSTALL_SHORTCUT"
+        android:name="com.hello.android.launcher.permission.INSTALL_SHORTCUT"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="dangerous"
         android:label="@string/permlab_install_shortcut"
         android:description="@string/permdesc_install_shortcut" />
     <permission
-        android:name="com.simple.android.launcher.permission.UNINSTALL_SHORTCUT"
+        android:name="com.hello.android.launcher.permission.UNINSTALL_SHORTCUT"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="dangerous"
         android:label="@string/permlab_uninstall_shortcut"
         android:description="@string/permdesc_uninstall_shortcut"/>
     <permission
-        android:name="com.simple.android.launcher.permission.READ_SETTINGS"
+        android:name="com.hello.android.launcher.permission.READ_SETTINGS"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="normal"
         android:label="@string/permlab_read_settings"
         android:description="@string/permdesc_read_settings"/>
     <permission
-        android:name="com.simple.android.launcher.permission.WRITE_SETTINGS"
+        android:name="com.hello.android.launcher.permission.WRITE_SETTINGS"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="normal"
         android:label="@string/permlab_write_settings"
         android:description="@string/permdesc_write_settings"/>
 
     <permission
-        android:name="com.simple.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS"
+        android:name="com.hello.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS"
         android:protectionLevel="signature"
         />
 
@@ -64,21 +64,21 @@
     <uses-permission android:name="android.permission.BIND_APPWIDGET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="com.simple.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.simple.android.launcher.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="com.simple.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.simple.android.launcher.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="com.simple.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS" />
+    <uses-permission android:name="com.hello.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.hello.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.hello.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.hello.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.hello.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS" />
 
     <application
-        android:name="com.simple.android.launcher.LauncherApplication"
+        android:name="com.hello.android.launcher.LauncherApplication"
         android:label="@string/application_name"
         android:icon="@mipmap/ic_launcher_home"
         android:hardwareAccelerated="true"
         android:largeHeap="@bool/config_largeHeap"
         android:supportsRtl="true">
         <activity
-            android:name="com.simple.android.launcher.Launcher"
+            android:name="com.hello.android.launcher.Launcher"
             android:launchMode="singleTask"
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
@@ -95,7 +95,7 @@
         </activity>
 
         <activity
-            android:name="com.simple.android.launcher.ToggleWeightWatcher"
+            android:name="com.hello.android.launcher.ToggleWeightWatcher"
             android:label="@string/toggle_weight_watcher"
             android:enabled="@bool/debug_memory_enabled"
             android:icon="@mipmap/ic_launcher_home">
@@ -107,7 +107,7 @@
         </activity>
 
         <activity
-            android:name="com.simple.android.launcher.WallpaperPickerActivity"
+            android:name="com.hello.android.launcher.WallpaperPickerActivity"
             android:theme="@style/Theme.WallpaperCropper"
             android:label="@string/pick_wallpaper"
             android:icon="@mipmap/ic_launcher_wallpaper"
@@ -120,7 +120,7 @@
         </activity>
 
         <activity
-            android:name="com.simple.android.launcher.WallpaperCropActivity"
+            android:name="com.hello.android.launcher.WallpaperCropActivity"
             android:theme="@style/Theme.WallpaperCropper"
             android:label="@string/crop_wallpaper"
             android:icon="@mipmap/ic_launcher_wallpaper"
@@ -135,7 +135,7 @@
 
         <!-- Debugging tools -->
         <activity
-            android:name="com.simple.android.launcher.MemoryDumpActivity"
+            android:name="com.hello.android.launcher.MemoryDumpActivity"
             android:theme="@android:style/Theme.NoDisplay"
             android:label="@string/debug_memory_activity"
             android:enabled="@bool/debug_memory_enabled"
@@ -149,48 +149,48 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.simple.android.launcher.MemoryTracker"
+        <service android:name="com.hello.android.launcher.MemoryTracker"
             android:enabled="@bool/debug_memory_enabled"
             >
         </service>
 
         <!-- Intent received used to prepopulate the default workspace. -->
         <receiver
-            android:name="com.simple.android.launcher.PreloadReceiver"
-            android:permission="com.simple.android.launcher.permission.PRELOAD_WORKSPACE">
+            android:name="com.hello.android.launcher.PreloadReceiver"
+            android:permission="com.hello.android.launcher.permission.PRELOAD_WORKSPACE">
             <intent-filter>
-                <action android:name="com.simple.android.launcher.action.PRELOAD_WORKSPACE" />
+                <action android:name="com.hello.android.launcher.action.PRELOAD_WORKSPACE" />
             </intent-filter>
         </receiver>
 
         <!-- Intent received used to install shortcuts from other applications -->
         <receiver
-            android:name="com.simple.android.launcher.InstallShortcutReceiver"
-            android:permission="com.simple.android.launcher.permission.INSTALL_SHORTCUT">
+            android:name="com.hello.android.launcher.InstallShortcutReceiver"
+            android:permission="com.hello.android.launcher.permission.INSTALL_SHORTCUT">
             <intent-filter>
-                <action android:name="com.simple.android.launcher.action.INSTALL_SHORTCUT" />
+                <action android:name="com.hello.android.launcher.action.INSTALL_SHORTCUT" />
             </intent-filter>
         </receiver>
 
         <!-- Intent received used to uninstall shortcuts from other applications -->
         <receiver
-            android:name="com.simple.android.launcher.UninstallShortcutReceiver"
-            android:permission="com.simple.android.launcher.permission.UNINSTALL_SHORTCUT">
+            android:name="com.hello.android.launcher.UninstallShortcutReceiver"
+            android:permission="com.hello.android.launcher.permission.UNINSTALL_SHORTCUT">
             <intent-filter>
-                <action android:name="com.simple.android.launcher.action.UNINSTALL_SHORTCUT" />
+                <action android:name="com.hello.android.launcher.action.UNINSTALL_SHORTCUT" />
             </intent-filter>
         </receiver>
 
         <!-- New user initialization; set up initial wallpaper -->
         <receiver
-            android:name="com.simple.android.launcher.UserInitializeReceiver"
+            android:name="com.hello.android.launcher.UserInitializeReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.USER_INITIALIZE" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.simple.android.launcher.PackageChangedReceiver" >
+        <receiver android:name="com.hello.android.launcher.PackageChangedReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_CHANGED"/>
                 <action android:name="android.intent.action.PACKAGE_REPLACED"/>
@@ -201,11 +201,11 @@
 
         <!-- The settings provider contains Home's data, like the workspace favorites -->
         <provider
-            android:name="com.simple.android.launcher.LauncherProvider"
-            android:authorities="com.simple.android.launcher.settings"
+            android:name="com.hello.android.launcher.LauncherProvider"
+            android:authorities="com.hello.android.launcher.settings"
             android:exported="true"
-            android:writePermission="com.simple.android.launcher.permission.WRITE_SETTINGS"
-            android:readPermission="com.simple.android.launcher.permission.READ_SETTINGS" />
+            android:writePermission="com.hello.android.launcher.permission.WRITE_SETTINGS"
+            android:readPermission="com.hello.android.launcher.permission.READ_SETTINGS" />
 
         <meta-data android:name="android.nfc.disable_beam_default"
                        android:value="true" />

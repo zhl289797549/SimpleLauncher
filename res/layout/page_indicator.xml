@@ -13,9 +13,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.simple.android.launcher.PageIndicator
+<com.hello.android.launcher.PageIndicator
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher"
     android:animateLayoutChanges="true"
     launcher:windowSize="@integer/config_maxNumberOfPageIndicatorsToShow">
-</com.simple.android.launcher.PageIndicator>
+</com.hello.android.launcher.PageIndicator>
