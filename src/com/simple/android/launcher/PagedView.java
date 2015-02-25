@@ -18,8 +18,6 @@ package com.simple.android.launcher;
 
 import java.util.ArrayList;
 
-import com.lidroid.xutils.util.LogUtils;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
@@ -1189,7 +1187,7 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
                     if (v == mDragView) continue;
                     if (mForceDrawAllChildrenNextFrame ||
                                (leftScreen <= i && i <= rightScreen && shouldDrawChild(v))) {
-                    	LogUtils.e("dispatch====");
+//                    	LogUtils.e("dispatch====");
                         drawChild(canvas, v, drawingTime);
                     }
                 }
